@@ -36,7 +36,7 @@ def run_ollama_serve():
 def load_dataset():
     """Load and flatten dataset from JSON file as per your format"""
     try:
-        with open(DATASET_JSON_PATH) as f:
+        with open(DEFAULT_DATASET_PATH) as f:
             data_dict = json.load(f)
         dataset = []
         for v in data_dict.values():
@@ -45,7 +45,7 @@ def load_dataset():
         dataset = list(set(dataset))
         return dataset
     except FileNotFoundError:
-        st.error(f"Error: Dataset file not found at {DATASET_JSON_PATH}")
+        st.error(f"Error: Dataset file not found at {DEFAULT_DATASET_PATH}")
         st.stop()
     except Exception as e:
         st.error(f"Error loading dataset: {e}")
