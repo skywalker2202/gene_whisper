@@ -5,10 +5,11 @@ import subprocess
 import time
 import ollama
 import re
-
+import os
 # Configuration
-DATASET_JSON_PATH = '/Users/suchanda/Desktop/workspace_rwth/rag/data/test_kidney_lr_human_human_pmc_line_dict.json'
-FEEDBACK_PATH = 'feedback.json'
+FEEDBACK_DIR = "data"
+FEEDBACK_PATH = os.path.join(FEEDBACK_DIR, "feedback.json")
+DEFAULT_DATASET_PATH = os.path.join("data", "test_kidney_lr_human_human_pmc_line_dict.json")
 EMBEDDING_MODEL = 'hf.co/CompendiumLabs/bge-base-en-v1.5-gguf'
 LANGUAGE_MODEL = 'deepseek-r1:1.5b'
 TOP_N_RESULTS = 10

@@ -2,6 +2,7 @@
 __pycache__/
 *.py[cod]
 *$py.class
+rag_env/*
 
 # C extensions
 *.so
@@ -135,6 +136,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+rag_env/
 
 # Spyder project settings
 .spyderproject
